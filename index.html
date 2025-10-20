@@ -6,54 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Twan Schoonen</title>
     <meta name="description"
-        content="Software engineer & tutor from Amsterdam. CV, tutoring, and projects by Twan Schoonen." />
+        content="Personal site of Twan Schoonen — engineer, maker, and outdoors enthusiast. CV, projects, and what I'm up to now." />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
-    <header class="site-header">
-        <nav class="nav">
-            <a class="brand" href="/">TS</a>
-            <div class="nav-links">
-                <a href="#tutoring">Tutoring</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-    </header>
-
     <main>
-        <!-- HERO -->
+
+        <!-- HERO (no header) -->
         <section class="hero container">
             <img class="avatar" src="me.jpg" alt="Photo of Twan Schoonen" />
             <div class="hero-text">
                 <h1>Hi, I’m Twan.</h1>
                 <p class="lead">
-                    Software engineer & tutor from Amsterdam. I like building reliable systems, learning by doing, and
-                    helping others grow.
+                    I’m a software engineer — and also a maker, teammate, and outdoors person.
+                    I like building useful things, learning by doing, and bringing people together.
                 </p>
                 <div class="cta">
                     <a class="btn primary" href="cv-engels.pdf" download>CV · English</a>
                     <a class="btn ghost" href="cv-nederlands.pdf" download>CV · Nederlands</a>
+                    <a class="link" href="https://github.com/twanschoonen">GitHub</a>
                 </div>
             </div>
         </section>
 
         <!-- HIGHLIGHTS -->
         <section class="container section">
-            <h2>What I’m good at</h2>
+            <h2>What I care about</h2>
             <ul class="badges">
-                <li>Systems & reliability</li>
-                <li>Clear communication</li>
-                <li>Teaching & coaching</li>
-                <li>Fast learning</li>
-                <li>Team player</li>
+                <li>Building & reliability</li>
+                <li>Clear, calm communication</li>
+                <li>Learning in public</li>
+                <li>Team spirit</li>
+                <li>Adventure & nature</li>
                 <li>Curiosity & initiative</li>
             </ul>
         </section>
 
-        <!-- PROJECTS -->
+        <!-- NOW / PLANNING -->
+        <section class="container section">
+            <h2>Now / Planning</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Work & learning</h3>
+                    <p>Exploring roles where tech meets real-world impact. Brushing up on systems design and shipping
+                        small tools.</p>
+                </article>
+                <article class="card">
+                    <h3>Movement & outdoors</h3>
+                    <p>Running, climbing, sailing. I like projects that mix technical problem-solving with being
+                        outside.</p>
+                </article>
+                <article class="card">
+                    <h3>Making & community</h3>
+                    <p>Small hobby projects, simple apps, and organizing activities that get people together.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROJECTS (add/rename freely) -->
         <section class="container section">
             <h2>Projects</h2>
             <div class="cards">
@@ -64,22 +77,23 @@
                 </article>
                 <article class="card">
                     <h3>Decentral trust logs</h3>
-                    <p>Master’s thesis on tamper-evident logs for decentralized trust. Architecture, security, and
-                        real-world design.</p>
+                    <p>Master’s thesis on tamper-evident logs for decentralized trust (architecture & security focus).
+                    </p>
                 </article>
                 <article class="card">
-                    <h3>Teaching & tutoring</h3>
-                    <p>Help students understand the “why” behind math & CS. Patient, practical, results-oriented.</p>
+                    <h3>Micro-tools</h3>
+                    <p>Small utilities for personal workflow and learning. I enjoy shipping tiny things that remove
+                        friction.</p>
                 </article>
             </div>
         </section>
 
-        <!-- GALLERY -->
+        <!-- GALLERY (optional; drop images in /images) -->
         <section class="container section">
             <h2>Gallery</h2>
             <div class="gallery">
                 <figure>
-                    <img src="images/sailing.jpg" alt="Sailing trip" loading="lazy">
+                    <img src="images/sailing.jpg" alt="Sailing" loading="lazy">
                     <figcaption>Sailing</figcaption>
                 </figure>
                 <figure>
@@ -93,18 +107,8 @@
             </div>
         </section>
 
-        <!-- TUTORING -->
-        <section id="tutoring" class="container section banner">
-            <div>
-                <h2>Tutoring</h2>
-                <p>I offer 1-on-1 lessons in math and computer science (secondary school to university). Clear
-                    explanations, steady progress.</p>
-            </div>
-            <a class="btn primary" href="mailto:twan.schoonen@gmail.com">Get in touch</a>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="container section">
+        <!-- CONTACT (no mailto; anti-scrape entities) -->
+        <section class="container section">
             <h2>Contact</h2>
             <p>Email: t&#119;an.schoo&#110;en&#64;gma&#105;l.com</p>
             <p>
@@ -112,6 +116,7 @@
                 <a class="link" href="https://www.linkedin.com/">LinkedIn</a>
             </p>
         </section>
+
     </main>
 
     <footer class="site-footer">
@@ -120,9 +125,7 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 
 </html>
