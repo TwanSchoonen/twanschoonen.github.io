@@ -7,10 +7,7 @@
     <title>Twan Schoonen</title>
     <meta name="description"
         content="Software engineer & tutor from Amsterdam. CV, tutoring, and projects by Twan Schoonen." />
-    <!-- Google Fonts: Inter (clean), Source Sans 3 (warm). Choose in CSS with --font-body -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon.ico">
 </head>
@@ -20,9 +17,8 @@
         <nav class="nav">
             <a class="brand" href="/">TS</a>
             <div class="nav-links">
-                <a href="cv.html">CV</a>
-                <a href="tutoring.html">Tutoring</a>
-                <a href="mailto:twan.schoonen@gmail.com">Contact</a>
+                <a href="#tutoring">Tutoring</a>
+                <a href="#contact">Contact</a>
             </div>
         </nav>
     </header>
@@ -38,8 +34,8 @@
                     helping others grow.
                 </p>
                 <div class="cta">
-                    <a class="btn primary" href="cv.html">Download CV</a>
-                    <a class="btn ghost" href="tutoring.html">Tutoring</a>
+                    <a class="btn primary" href="cv-engels.pdf" download>CV · English</a>
+                    <a class="btn ghost" href="cv-nederlands.pdf" download>CV · Nederlands</a>
                 </div>
             </div>
         </section>
@@ -49,7 +45,7 @@
             <h2>What I’m good at</h2>
             <ul class="badges">
                 <li>Systems & reliability</li>
-                <li>Clear, calm communication</li>
+                <li>Clear communication</li>
                 <li>Teaching & coaching</li>
                 <li>Fast learning</li>
                 <li>Team player</li>
@@ -57,7 +53,7 @@
             </ul>
         </section>
 
-        <!-- PROJECTS (optional – fill later) -->
+        <!-- PROJECTS -->
         <section class="container section">
             <h2>Projects</h2>
             <div class="cards">
@@ -78,23 +74,41 @@
             </div>
         </section>
 
-        <!-- TUTORING TEASER -->
-        <section class="container section banner">
+        <!-- GALLERY -->
+        <section class="container section">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/sailing.jpg" alt="Sailing trip" loading="lazy">
+                    <figcaption>Sailing</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/climbing.jpg" alt="Climbing" loading="lazy">
+                    <figcaption>Climbing</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/hiking.jpg" alt="Hiking" loading="lazy">
+                    <figcaption>Hiking</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- TUTORING -->
+        <section id="tutoring" class="container section banner">
             <div>
-                <h2>Need tutoring?</h2>
+                <h2>Tutoring</h2>
                 <p>I offer 1-on-1 lessons in math and computer science (secondary school to university). Clear
                     explanations, steady progress.</p>
             </div>
-            <a class="btn primary" href="tutoring.html">Learn more</a>
+            <a class="btn primary" href="mailto:twan.schoonen@gmail.com">Get in touch</a>
         </section>
 
         <!-- CONTACT -->
-        <section class="container section">
+        <section id="contact" class="container section">
             <h2>Contact</h2>
-            <p>Best way to reach me: <a href="mailto:twan.schoonen@gmail.com">twan.schoonen@gmail.com</a></p>
+            <p>Email: t&#119;an.schoo&#110;en&#64;gma&#105;l.com</p>
             <p>
-                <a class="link" href="https://github.com/twanschoonen">GitHub</a>
-                ·
+                <a class="link" href="https://github.com/twanschoonen">GitHub</a> ·
                 <a class="link" href="https://www.linkedin.com/">LinkedIn</a>
             </p>
         </section>

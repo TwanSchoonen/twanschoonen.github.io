@@ -1,55 +1,33 @@
-/* =========
-   THEME
-   ========= */
 :root {
-    /* Switch font here: "Inter", "Source Sans 3" */
     --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    /* Try Source Sans:  --font-body: "Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; */
-
-    /* Sky/Sea palette */
     --bg: #f7fbff;
-    /* very light sky */
     --text: #1a2b3b;
-    /* deep slate */
     --muted: #5c6b79;
     --blue-500: #1d6ee3;
-    /* ocean blue primary */
     --blue-600: #155fcb;
     --blue-050: #eaf3ff;
-    /* light tint for cards/banners */
-
     --card: #ffffff;
     --border: #e6eef8;
-
     --radius: 14px;
     --shadow: 0 6px 20px rgba(13, 51, 102, 0.08);
-
     --maxw: 980px;
     --gap: 16px;
 }
 
-/* =========
-   BASE
-   ========= */
+/* ===== BASE ===== */
 * {
     box-sizing: border-box;
-}
-
-html,
-body {
-    height: 100%;
 }
 
 body {
     margin: 0;
     font-family: var(--font-body);
     color: var(--text);
-    background: linear-gradient(180deg, var(--bg), #ffffff);
+    background: linear-gradient(180deg, var(--bg), #fff);
     line-height: 1.6;
 }
 
 .container {
-    width: 100%;
     max-width: var(--maxw);
     margin: 0 auto;
     padding: 0 20px;
@@ -89,9 +67,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* =========
-   NAV
-   ========= */
+/* ===== NAV ===== */
 .site-header {
     background: #ffffffcc;
     backdrop-filter: blur(8px);
@@ -126,9 +102,7 @@ a:hover {
     margin-left: 16px;
 }
 
-/* =========
-   HERO
-   ========= */
+/* ===== HERO ===== */
 .hero {
     display: grid;
     grid-template-columns: 96px 1fr;
@@ -150,7 +124,6 @@ a:hover {
     font-size: 1.05rem;
 }
 
-/* CTA buttons */
 .btn {
     display: inline-block;
     padding: 10px 16px;
@@ -178,9 +151,11 @@ a:hover {
     background: var(--blue-050);
 }
 
-/* =========
-   SECTIONS
-   ========= */
+.cta {
+    margin-top: 8px;
+}
+
+/* ===== SECTIONS ===== */
 .section {
     padding: 22px 0;
 }
@@ -203,7 +178,7 @@ a:hover {
     font-weight: 600;
 }
 
-/* Cards (projects) */
+/* Cards */
 .cards {
     display: grid;
     gap: 12px;
@@ -221,6 +196,45 @@ a:hover {
     margin: 6px 0 0;
 }
 
+/* Gallery */
+.gallery {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.gallery figure {
+    margin: 0;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.gallery figcaption {
+    padding: 8px 10px;
+    font-size: .9rem;
+    color: var(--muted);
+}
+
+@media(min-width:720px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery img {
+        height: 200px;
+    }
+}
+
 /* Tutoring banner */
 .banner {
     display: flex;
@@ -234,9 +248,7 @@ a:hover {
     box-shadow: var(--shadow);
 }
 
-/* =========
-   FOOTER
-   ========= */
+/* Footer */
 .site-footer {
     border-top: 1px solid var(--border);
     padding: 18px 0;
@@ -244,10 +256,8 @@ a:hover {
     text-align: center;
 }
 
-/* =========
-   RESPONSIVE
-   ========= */
-@media (min-width: 720px) {
+/* Responsive hero + typography */
+@media(min-width:720px) {
     h1 {
         font-size: 2.4rem;
     }
