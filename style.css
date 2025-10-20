@@ -1,0 +1,269 @@
+/* =========
+   THEME
+   ========= */
+:root {
+    /* Switch font here: "Inter", "Source Sans 3" */
+    --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    /* Try Source Sans:  --font-body: "Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; */
+
+    /* Sky/Sea palette */
+    --bg: #f7fbff;
+    /* very light sky */
+    --text: #1a2b3b;
+    /* deep slate */
+    --muted: #5c6b79;
+    --blue-500: #1d6ee3;
+    /* ocean blue primary */
+    --blue-600: #155fcb;
+    --blue-050: #eaf3ff;
+    /* light tint for cards/banners */
+
+    --card: #ffffff;
+    --border: #e6eef8;
+
+    --radius: 14px;
+    --shadow: 0 6px 20px rgba(13, 51, 102, 0.08);
+
+    --maxw: 980px;
+    --gap: 16px;
+}
+
+/* =========
+   BASE
+   ========= */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--text);
+    background: linear-gradient(180deg, var(--bg), #ffffff);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+    margin: 0 0 12px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-top: 6px;
+}
+
+h3 {
+    font-size: 1.05rem;
+}
+
+p {
+    margin: 0 0 10px;
+    color: var(--muted);
+}
+
+a {
+    color: var(--blue-600);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========
+   NAV
+   ========= */
+.site-header {
+    background: #ffffffcc;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    max-width: var(--maxw);
+    margin: 0 auto;
+}
+
+.brand {
+    display: inline-grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--blue-050);
+    color: var(--blue-600);
+    font-weight: 700;
+    border: 1px solid var(--border);
+}
+
+.nav-links a {
+    margin-left: 16px;
+}
+
+/* =========
+   HERO
+   ========= */
+.hero {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 16px;
+    align-items: center;
+    padding: 28px 20px 8px;
+}
+
+.avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.lead {
+    font-size: 1.05rem;
+}
+
+/* CTA buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--blue-500);
+    font-weight: 600;
+}
+
+.btn.primary {
+    background: var(--blue-500);
+    color: #fff;
+}
+
+.btn.primary:hover {
+    background: var(--blue-600);
+}
+
+.btn.ghost {
+    background: transparent;
+    color: var(--blue-600);
+    margin-left: 8px;
+}
+
+.btn.ghost:hover {
+    background: var(--blue-050);
+}
+
+/* =========
+   SECTIONS
+   ========= */
+.section {
+    padding: 22px 0;
+}
+
+.badges {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.badges li {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: var(--blue-050);
+    color: var(--blue-600);
+    border: 1px solid var(--border);
+    font-weight: 600;
+}
+
+/* Cards (projects) */
+.cards {
+    display: grid;
+    gap: 12px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px;
+    box-shadow: var(--shadow);
+}
+
+.card p {
+    margin: 6px 0 0;
+}
+
+/* Tutoring banner */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    background: var(--blue-050);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px;
+    box-shadow: var(--shadow);
+}
+
+/* =========
+   FOOTER
+   ========= */
+.site-footer {
+    border-top: 1px solid var(--border);
+    padding: 18px 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* =========
+   RESPONSIVE
+   ========= */
+@media (min-width: 720px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero {
+        grid-template-columns: 120px 1fr;
+        gap: 20px;
+        padding: 40px 20px 12px;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

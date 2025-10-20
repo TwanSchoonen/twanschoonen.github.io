@@ -1,32 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Twan Schoonen</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="Software engineer & tutor from Amsterdam. CV, tutoring, and projects by Twan Schoonen." />
+    <!-- Google Fonts: Inter (clean), Source Sans 3 (warm). Choose in CSS with --font-body -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
-    <header>
-        <h1>Twan Schoonen</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="cv.html">CV</a>
-            <a href="tutoring.html">Tutoring</a>
+    <header class="site-header">
+        <nav class="nav">
+            <a class="brand" href="/">TS</a>
+            <div class="nav-links">
+                <a href="cv.html">CV</a>
+                <a href="tutoring.html">Tutoring</a>
+                <a href="mailto:twan.schoonen@gmail.com">Contact</a>
+            </div>
         </nav>
     </header>
 
     <main>
-        <h2>Hi, I’m Twan.</h2>
-        <p>Software engineer, adventurer, and lifelong learner. I love creating, connecting, and helping others grow.
-        </p>
+        <!-- HERO -->
+        <section class="hero container">
+            <img class="avatar" src="me.jpg" alt="Photo of Twan Schoonen" />
+            <div class="hero-text">
+                <h1>Hi, I’m Twan.</h1>
+                <p class="lead">
+                    Software engineer & tutor from Amsterdam. I like building reliable systems, learning by doing, and
+                    helping others grow.
+                </p>
+                <div class="cta">
+                    <a class="btn primary" href="cv.html">Download CV</a>
+                    <a class="btn ghost" href="tutoring.html">Tutoring</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- HIGHLIGHTS -->
+        <section class="container section">
+            <h2>What I’m good at</h2>
+            <ul class="badges">
+                <li>Systems & reliability</li>
+                <li>Clear, calm communication</li>
+                <li>Teaching & coaching</li>
+                <li>Fast learning</li>
+                <li>Team player</li>
+                <li>Curiosity & initiative</li>
+            </ul>
+        </section>
+
+        <!-- PROJECTS (optional – fill later) -->
+        <section class="container section">
+            <h2>Projects</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Market-making migration</h3>
+                    <p>Led the external-to-internal migration of a mission-critical trading system. Live, reliable, and
+                        still in use.</p>
+                </article>
+                <article class="card">
+                    <h3>Decentral trust logs</h3>
+                    <p>Master’s thesis on tamper-evident logs for decentralized trust. Architecture, security, and
+                        real-world design.</p>
+                </article>
+                <article class="card">
+                    <h3>Teaching & tutoring</h3>
+                    <p>Help students understand the “why” behind math & CS. Patient, practical, results-oriented.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- TUTORING TEASER -->
+        <section class="container section banner">
+            <div>
+                <h2>Need tutoring?</h2>
+                <p>I offer 1-on-1 lessons in math and computer science (secondary school to university). Clear
+                    explanations, steady progress.</p>
+            </div>
+            <a class="btn primary" href="tutoring.html">Learn more</a>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="container section">
+            <h2>Contact</h2>
+            <p>Best way to reach me: <a href="mailto:twan.schoonen@gmail.com">twan.schoonen@gmail.com</a></p>
+            <p>
+                <a class="link" href="https://github.com/twanschoonen">GitHub</a>
+                ·
+                <a class="link" href="https://www.linkedin.com/">LinkedIn</a>
+            </p>
+        </section>
     </main>
 
-    <footer>
-        <p> <a href="mailto:twan.schoonen@gmail.com">twan.schoonen@gmail.com</a></p>
+    <footer class="site-footer">
+        <div class="container">
+            <small>© <span id="year"></span> Twan Schoonen · Amsterdam</small>
+        </div>
     </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
