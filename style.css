@@ -210,6 +210,18 @@ a:hover {
     text-align: center;
 }
 
+.now-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0;
+}
+
+.now-list li {
+    margin: 6px 0;
+    color: var(--muted);
+}
+
+
 /* ===== RESPONSIVE ===== */
 @media (min-width:720px) {
     h1 {
