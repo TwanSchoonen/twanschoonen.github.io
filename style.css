@@ -221,6 +221,34 @@ a:hover {
     color: var(--muted);
 }
 
+.lifestyle-list {
+    display: flex;
+    justify-content: center;
+    /* centreert de items */
+    flex-wrap: wrap;
+    /* laat ze afbreken op kleine schermen */
+    gap: 1.5rem;
+    /* ruimte tussen de items */
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.lifestyle-list li {
+    background: rgba(255, 255, 255, 0.05);
+    /* subtiele achtergrond */
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    transition: background 0.2s ease;
+}
+
+.lifestyle-list li:hover {
+    background: rgba(255, 255, 255, 0.15);
+    /* lichte hover */
+}
+
 
 /* ===== RESPONSIVE ===== */
 @media (min-width:720px) {
