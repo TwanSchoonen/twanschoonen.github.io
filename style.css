@@ -24,6 +24,8 @@
     --shadow: 0 6px 20px rgba(13, 51, 102, 0.08);
 
     --maxw: 980px;
+    --gutter: clamp(1rem, 4.5vw, 28px);
+    /* 16px → ~28px depending on width */
 }
 
 /* =========================================
@@ -31,6 +33,10 @@
    ========================================= */
 * {
     box-sizing: border-box;
+}
+
+.section p {
+    max-width: 65ch;
 }
 
 body {
@@ -45,7 +51,7 @@ body {
     width: 100%;
     max-width: var(--maxw);
     margin: 0 auto;
-    padding: 0 20px;
+    padding-inline: var(--gutter);
     /* desktop & tablet default */
 }
 
@@ -95,7 +101,7 @@ a:hover {
     grid-template-columns: 96px 1fr;
     gap: 16px;
     align-items: center;
-    padding: 28px 20px 8px;
+    padding: 28px var(--gutter) 8px;
 }
 
 .avatar {
@@ -274,13 +280,6 @@ a:hover {
 /* =========================================
    RESPONSIVE
    ========================================= */
-@media (max-width: 600px) {
-    .container {
-        padding-left: 1.1rem;
-        padding-right: 1.1rem;
-    }
-}
-
 @media (min-width: 720px) {
     h1 {
         font-size: 2.4rem;
