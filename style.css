@@ -24,7 +24,7 @@
     --shadow: 0 6px 20px rgba(13, 51, 102, 0.08);
 
     --maxw: 980px;
-    --gutter: clamp(1rem, 4.5vw, 28px);
+    --gutter: clamp(16px, 5vw, 36px);
 }
 
 /* =========================================
