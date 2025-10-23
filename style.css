@@ -101,7 +101,7 @@ a:hover {
     grid-template-columns: 96px 1fr;
     gap: 16px;
     align-items: center;
-    padding: 28px var(--gutter) 8px;
+    padding: 28px 0 8px;
 }
 
 .avatar {
@@ -288,7 +288,8 @@ a:hover {
     .hero {
         grid-template-columns: 120px 1fr;
         gap: 20px;
-        padding: 40px 20px 12px;
+        padding: 40px 0 12px;
+        /* keep sides at container's --gutter */
     }
 
     .avatar {
