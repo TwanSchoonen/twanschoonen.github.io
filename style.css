@@ -25,7 +25,6 @@
 
     --maxw: 980px;
     --gutter: clamp(1rem, 4.5vw, 28px);
-    /* 16px → ~28px depending on width */
 }
 
 /* =========================================
